@@ -8,15 +8,35 @@
 </head>
 <body>
 
-<span>Pommes (au kg) : </span>
+<!-- Compteur Pommes -->
+<p><span>Pommes (au kg) : </span>
 
-    <button id="minus">-</button>
-    <button id="plus">+</button>
-    <span id="counter">0</span>
 
-    <div>Total : <span id="total"></span></div>
+    <button id="appleMinus">-</button>
+    <button id="applePlus">+</button>
+    <span id="counterApple">0</span>
+</p>
+
+<p><span>Ceries (au kg) : </span>
+
+    <button id="cherryMinus">-</button>
+    <button id="cherryPlus">+</button>
+    <span id="counterCherry">0</span>
+</p>
+
+<p><span>Bananes (au kg) : </span>
+
+
+    <button id="bananaMinus">-</button>
+    <button id="bananaPlus">+</button>
+    <span id="counterBanana">0</span>
+</p>
     
-    <script src="main.js"></script>
+
+
+<div>Total : <span id="total"></span></div>
+
+<script src="williams.js"></script>
 
 </body>
 </html>
