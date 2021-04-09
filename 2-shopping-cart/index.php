@@ -36,7 +36,8 @@
 
 <div>Total : <span id="total"></span></div>
 
-<script src="williams.js"></script>
+
 
 </body>
+<script src="williams.js"></script>
 </html>
