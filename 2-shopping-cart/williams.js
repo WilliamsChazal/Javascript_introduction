@@ -1,124 +1,52 @@
-const counterApple=document.getElementById('counterApple');
-const buttonApplePlus=document.getElementById('applePlus');
-const buttonAppleMinus=document.getElementById('appleMinus');
+const articles = [
+    { price: 0.97, counter: 0, htmlId: 'apple' },
+    { price: 7.98, counter: 0, htmlId: 'cherry' },
+    { price: 1.03, counter: 0, htmlId: 'banana' }
+];
 
-const counterCherry=document.getElementById('counterCherry');
-const buttonCherryPlus=document.getElementById('cherryPlus');
-const buttonCherryMinus=document.getElementById('cherryMinus');
+articles.forEach(function(article){
+    article.html = document.getElementById('counter')+article.htmlId;
+    const moreButton = document.getElementById('more')+article.htmlId;
+    const lessButton = document.getElementById('less')+article.htmlId;
+    moreButton.addEventListener('click',function(){ more(article) });
+    lessButton.addEventListener('click',function(){ less(article) });
+})
 
-const counterBanana=document.getElementById('counterBanana');
-const buttonBananaPlus=document.getElementById('bananaPlus');
-const buttonBananaMinus=document.getElementById('bananaMinus');
+function total(){
+    let total = 0; 
+    articles.forEach(function(article){
+        total = total + article.price*article.counter;
+    })
+    document.getElementById('total').innerHTML = total +' €';  
+}
 
-
-let counterValueApple=0;
-const applePrice=0.97;
-let counterValueCherry=0;
-const cherryPrice=7.98;
-let counterValueBanana=0;
-const bananaPrice=1.03;
-
-const total=document.getElementById('total');
-//var addition=counterValue*applePrice;
-
-
-buttonApplePlus.addEventListener('click',moreApple);
-buttonAppleMinus.addEventListener('click',lessApple);
-
-buttonCherryPlus.addEventListener('click',moreCherry);
-buttonCherryMinus.addEventListener('click',lessCherry);
-
-buttonBananaPlus.addEventListener('click',moreBanana);
-buttonBananaMinus.addEventListener('click',lessBanana);
-
-function moreApple(){
-    counterValueApple++; 
-
-    counterApple.innerHTML=counterValueApple+' articles';
-    if(counterValueApple== 1){
-        counterApple.innerHTML=counterValueApple+' article';
-    }
-    else{
-        counterApple.innerHTML=counterValueApple+' articles';  
-    }
-    document.getElementById("total").innerHTML = counterValueApple*applePrice+cherryPrice*counterValueCherry+counterValueBanana*bananaPrice;
+function more(article){
+    article.counter++;
+        if(article.counter==1){
+        article.html.innerHTML=article.counter+' article';
+        }
+        else{
+            article.html.innerHTML=article.counter+' articles';  
+        }
+        total();
 }
 
 
-function lessApple(){
-    counterValueApple--;
-    if(counterValueApple<=0){
-        counterValueApple=0 ;
-        counterApple.innerHTML=counterValueApple+' article';
+function less(){
+    article.counter--;
+    if(article.counter<=0){
+        article.counter=0 ;
+        article.html.innerHTML=article.counter+' article';
     }
     else if(counterValueApple== 1){
-        counterApple.innerHTML=counterValueApple+' article';
+        article.html.innerHTML=article.counter+' article';
     }
     else{
-        counterApple.innerHTML=counterValueApple+' articles';
+        article.html.innerHTML=article.counter+' articles';
     }
-    document.getElementById("total").innerHTML = (counterValueApple*applePrice)+(cherryPrice*counterValueCherry)+(counterValueBanana*bananaPrice);
+    total();
 }
 
 
 
 
-function moreCherry(){
-    counterValueCherry++; 
-
-    counterCherry.innerHTML=counterValueCherry+' articles';
-    if(counterValueCherry== 1){
-        counterCherry.innerHTML=counterValueCherry+' article';
-    }
-    else{
-        counterCherry.innerHTML=counterValueCherry+' articles';  
-    }
-    document.getElementById("total").innerHTML = counterValueApple*applePrice+cherryPrice*counterValueCherry+counterValueBanana*bananaPrice;
-}
-
-
-function lessCherry(){
-    counterValueCherry--;
-
-    if(counterValueCherry<=0){
-        counterValueCherry=0 ;
-        counterCherry.innerHTML=counterValueCherry+' article';
-    }
-    else if(counterValueCherry== 1){
-        counterCherry.innerHTML=counterValueCherry+' article';
-    }
-    else{
-        counterCherry.innerHTML=counterValueCherry+' articles';
-    }
-    document.getElementById("total").innerHTML = counterValueApple*applePrice+cherryPrice*counterValueCherry+counterValueBanana*bananaPrice;
-}
-
-
-function moreBanana(){
-    counterValueBanana++; 
-
-    counterBanana.innerHTML=counterValueBanana+' articles';
-    if(counterValueBanana== 1){
-        counterBanana.innerHTML=counterValueBanana+' article';
-    }
-    else{
-        counterBanana.innerHTML=counterValueBanana+' articles';  
-    }
-    document.getElementById("total").innerHTML = (counterValueApple*applePrice)+(cherryPrice*counterValueCherry)+(counterValueBanana*bananaPrice);
-}
-
-more
-function lessBanana(){
-    counterValueBanana--;
-    if(counterValueBanana<=0){
-        counterValueBanana=0 ;
-        counterBanana.innerHTML=counterValueBanana+' article';
-    }
-    else if(counterValueBanana== 1){
-        counterBanana.innerHTML=counterValueBanana+' article';
-    }
-    else{
-        counterBanana.innerHTML=counterValueBanana+' articles';
-    }
-    document.getElementById("total").innerHTML = (counterValueApple*applePrice)+(cherryPrice*counterValueCherry)+(counterValueBanana*bananaPrice);
-}

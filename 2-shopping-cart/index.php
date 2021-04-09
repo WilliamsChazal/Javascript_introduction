@@ -12,23 +12,23 @@
 <p><span>Pommes (au kg) : </span>
 
 
-    <button id="appleMinus">-</button>
-    <button id="applePlus">+</button>
+    <button id="lessApple">-</button>
+    <button id="moreApple">+</button>
     <span id="counterApple">0</span>
 </p>
 
 <p><span>Ceries (au kg) : </span>
 
-    <button id="cherryMinus">-</button>
-    <button id="cherryPlus">+</button>
+    <button id="lessCherry">-</button>
+    <button id="moreCherry">+</button>
     <span id="counterCherry">0</span>
 </p>
 
 <p><span>Bananes (au kg) : </span>
 
 
-    <button id="bananaMinus">-</button>
-    <button id="bananaPlus">+</button>
+    <button id="lessBanana">-</button>
+    <button id="moreBanana">+</button>
     <span id="counterBanana">0</span>
 </p>
     
