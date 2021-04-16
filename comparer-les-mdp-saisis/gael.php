@@ -24,6 +24,6 @@
             <input type="button" value="Send">
         </fieldset>
     </form>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="gael.js"></script>
   </body>
 </html>
