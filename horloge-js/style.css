@@ -2,5 +2,71 @@
 
 body{
 font-family: 'digital-7 Mono';
-font-size: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#analog-clock{
+    position: absolute;
+    top:240px;
+}
+
+#digital-clock{
+    width: 240px;
+    text-align: center;
+}
+
+#digital-clock__time{
+    font-size: 56px;
+    width: 100%;
+}
+
+#digital-clock__date{
+    font-size: 28px;
+    width: 100%;
+}
+
+#analog-clock__hours,#analog-clock__minutes,#analog-clock__seconds,#analog-clock__dot{
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    transform-origin: bottom center;
+}
+
+#analog-clock__hours{
+    height: 112px;
+    width: 8px;
+    top: -112px;
+    transform: rotate(0deg);
+    background-color: black;
+    z-index: 1;
+    margin-left: 2px;
+}
+#analog-clock__minutes{
+    height: 136px;
+    width: 4px;
+    margin-left:4px;
+    top: -136px;
+    transform: rotate(90deg);
+    background-color: black;
+    z-index: 2;
+}
+#analog-clock__seconds{
+    height: 152px;
+    width: 2px;
+    top: -152px;
+    margin-left:5px;
+    transform: rotate(180deg);
+    background-color: red;
+    z-index: 3;
+}
+
+#analog-clock__dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    z-index: 4;
+    background-color: seashell;
+    top: 0;
 }

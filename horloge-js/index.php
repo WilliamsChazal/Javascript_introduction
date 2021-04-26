@@ -13,9 +13,21 @@
         <div id="digital-clock__time">
             <span id="digital-clock__time--hours"></span><span>:</span><span id="digital-clock__time--minutes"></span><span>:</span><span id="digital-clock__time--seconds"></span>
         </div>
+         <div id="digital-clock__date">
+        <span id="digital-clock__date--day"></span>
+    </div>
+</div>
+
+
+<div id="analog-clock">
+        <span id="analog-clock__hours"></span>
+        <span id="analog-clock__minutes"></span>
+        <span id="analog-clock__seconds"></span>
+        <span id="analog-clock__dot"></span>
 
 
 </div>
+
 
 
 
