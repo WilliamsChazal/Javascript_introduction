@@ -1,0 +1,10 @@
+#carrousel{
+    height:240px ;
+    width: 240px;
+    background-image: url(images/1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: darkblue 2px solid;
+}
+

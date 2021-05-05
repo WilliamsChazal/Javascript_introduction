@@ -9,7 +9,8 @@ const displayAnalogSeconds = document.getElementById('analog-clock__seconds');
 
 const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 
-function clock(){
+setInterval(()=>{
+
     let date = new Date(); 
     let hours = date.getHours();
     let minutes = date.getMinutes();
@@ -38,9 +39,5 @@ function clock(){
     displayAnalogHours.style.transform = `rotate(${hoursRotation}deg)`;
     displayAnalogSeconds.style.transform = `rotate(${secondsRotation}deg)`;
     displayAnalogMinutes.style.transform = `rotate(${minutesRotation}deg)`;
-    
-}
-clock();
-
-setInterval(clock,1000);
+},1000);
 
