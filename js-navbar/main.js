@@ -12,8 +12,16 @@ function slideDown() {
     prevScrollpos < currentScrollPos;
 } */
 /* window.onscroll = () => { */
-window.onscroll=slideDown; 
+/* window.onscroll=slideDown; 
 function slideDown() {
     if(window.scrollY > 0)document.getElementById('navbar').style.top = "0";
     else document.getElementById('navbar').style.top ="-56px";
-}
+} */
+
+window.onscroll = function (){
+    if(window.scrollY > 0) {
+        document.getElementById('navbar').style.top = "0";     
+    } else {
+        document.getElementById('navbar').style.top ="-56px";
+    }
+};

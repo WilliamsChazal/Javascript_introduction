@@ -36,9 +36,9 @@ else {
 
 
     function fibonacci(nbr) {
-        var n1 = 0;
-        var n2 = 1;
-        var somme = 0;
+        let n1 = 0;
+        let n2 = 1;
+        let somme = 0;
       
         for(let i = 2; i <= nbr; i++){
            //somme des deux derniers nombres
