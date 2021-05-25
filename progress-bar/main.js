@@ -3,7 +3,7 @@ function scrollIndicator() {
 
 }
  */
-window.addEventListener('scroll', function(){
+/* window.addEventListener('scroll', function(){
     let  a = document.documentElement.scrollTop; // Permet de voir le nombre de pixels qui ont défilé // 
     console.log("a="+ a); // combien on descend //
     let b = document.documentElement.scrollHeight;
@@ -16,4 +16,13 @@ window.addEventListener('scroll', function(){
     console.log(e)
 
     document.getElementById("bar").style.width=e+"%";
-});
+}); */
+
+// version de gael //
+window.addEventListener("scroll", function (){
+    let scrolling = document.documentElement.scrollTop;
+    console.log(scrolling);
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    scrolled = (scrolling / height)*100;
+    document.getElementById("bar").style.width = scrolled +"%";
+    });
